@@ -1,12 +1,11 @@
 <h1>Happy Pizza Menu</h2>
 
-<h2>
 <ul>
-<%@pizzas.each do |pizza|%>
-<li>Name: <%=link_to(pizza.name, pizza_path(pizza.id))%>, Price: <%=pizza.price%> </li>
-<% end %>
+  <%@pizzas.each do |pizza|%>
+  <li>Name: <%=link_to(pizza.name, pizza_path(pizza.id))%>, Price: <%=pizza.price%> </li>
+  <% end %>
 </ul>
-</h2>
 
 <h2><%= link_to("Back to the Homepage", whatever_path )%></h2>
 <h2><%=link_to("Make Your Own Pizza", pizzas_new_path)%></h2>
+
